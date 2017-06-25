@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱心鱼</title>
+    <style>
+        body{
+            padding-top:10px;
+            background-color:#71C6D0;
+        }
+        .all_bg{
+            width:800px;
+            height:600px;
+            margin:0 auto;
+        }
+        #allcanvas{
+            position:relative;
+            width:800px;
+            height:600px;
+            margin:0;
+        }
+        #canvas1{
+            position:absolute;
+            bottom:0;
+            left:0;
+            z-index:1;
+        }
+        #canvas2{
+            position:absolute;
+            bottom:0;
+            left:0;
+            z-index:0;
+        }
+        #game-state{
+            position:absolute;
+            top:25%;
+            left:25%;
+            font-family:"Verdana";
+            font-weight:bold;
+            width:400px;
+            height:400px;
+            margin:0 auto;
+            border:1px solid #71C6D0;
+            border-radius: 5px;
+            background:rgba(255,255,255,0.7);
+            z-index:3;
+        }
+        #game-state>p{
+            text-indent: 10px;
+            color:#002F6A;
+        }
+        span{
+            display:inline-block;
+            width:80px;
+            height:50px;
+            text-align:center;
+            margin-left:160px;
+        }
+        #start-btn{
+            margin-top:100px;
+        }
+        span:hover{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="all_bg">
+        <div id="allcanvas">
+            <canvas id="canvas1"width="800"height="600"></canvas>
+            <canvas id="canvas2"width="800"height="600"></canvas>
+            <div id="game-state">
+                <h3>游戏说明:</h3>
+                <p>大鱼会随着鼠标的移动而移动，大鱼在移动的同时要吃上升的海葵果实，
+                    吃到果实后要把果实喂给小鱼吃，这样小鱼才会有能量活着，当一定时间内
+                    大鱼没有给小鱼果实吃，小鱼就会死去。祝您游戏愉快！
+                </p>
+                <span id="start-btn">START</span><br>
+                <span id="continue-btn">CONTINUE</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/commonFunctions.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/ane.js"></script>
+    <script src="js/fruit.js"></script>
+    <script src="js/mum.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/baby.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/vivew.js"></script>
+    <script src="js/halo.js"></script>
+</body>
+</html>
